@@ -10,4 +10,11 @@
 
 @interface LRLSolDescription : NSObject
 
+@property (nullable) NSNumber * selectedSol;
+@property (nullable) NSNumber * totalPhotos;
+@property (nullable) NSMutableArray<NSString*> * cameras;
+
+-(instancetype)initWithDictionary:(NSDictionary*)solDictionary;
+
+
 @end

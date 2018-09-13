@@ -9,22 +9,32 @@
 import UIKit
 
 class LRLPictureDetailViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var imageOutlet: UIImageView!
+    @IBOutlet weak var cameraOutlet: UILabel!
+    @IBOutlet weak var solOutlet: UILabel!
+    @IBOutlet weak var earthDayOutlet: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateView()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    var photo: LRLPhoto?
+    
+    func updateView(){
+        guard let photo = photo else {return}
+        imageOutlet.image = photo.image
+        cameraOutlet.text = photo.cameraName
+        solOutlet.text = "\(photo.sol ?? 0)"
+        earthDayOutlet.text = photo.earthDate
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

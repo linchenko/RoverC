@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LRLRover.h"
+#import "LRLSolDescription.h"
 @interface LRLSolTableViewController : UITableViewController
+
+@property (nonatomic, readwrite) LRLRover *rover;
+@property (nonatomic) NSMutableArray<LRLSolDescription*> * solDescriptions;
 
 @end

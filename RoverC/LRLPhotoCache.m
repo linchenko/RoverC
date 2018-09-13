@@ -10,4 +10,17 @@
 
 @implementation LRLPhotoCache
 
+//-(NSCache*)cache{
+//    [NSCache initialize];
+//}
+//
+//-(void)catchImageData:(NSData*)data forIdentifier: (NSInteger)identifier
+//{
+//    
+//}
+//-(NSData*)imageDataForIdentifier:(NSInteger)identifier
+//{
+//    
+//}
+
 @end

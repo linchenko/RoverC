@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LRLPhoto.h"
+
 
 @interface LRLPhotoCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic, readwrite) LRLPhoto * photo;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageOutlet;
+
+-(void)updateView;
+
+
 
 @end

@@ -7,7 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LRLSolDescription.h"
+#import "LRLRover.h"
+#import "LRLPhoto.h"
+#import <UIKit/UIKit.h>
+#import "LRLMarsRoverClient.h"
+#import "LRLPhotoCollectionViewCell.h"
+#import "RoverC-Bridging-Header.h"
+
+
+
+
 
 @interface LRLPhotoCollectionViewController : UICollectionViewController
+
+@property LRLSolDescription * solDescription;
+@property LRLRover * rover;
+@property (nonatomic) NSMutableArray<LRLPhoto*> * photos;
+@property NSMutableArray<UIImage*> * images;
+
+
 
 @end

@@ -10,4 +10,24 @@
 
 @implementation LRLSolDescription
 
+
+-(instancetype)initWithDictionary:(NSDictionary*)solDictionary
+{
+    NSNumber *selectedSol = solDictionary[@"sol"];
+    NSNumber *totalPhotos = solDictionary[@"total_photos"];
+    NSMutableArray *cameras = solDictionary[@"cameras"];
+    
+    if (![selectedSol isKindOfClass:[NSNumber class]]){
+        return nil;
+    }
+    
+    self = [super init];
+    if (self){
+        _selectedSol = selectedSol;
+        _totalPhotos = totalPhotos;
+        _cameras = cameras;
+    }
+    return self;
+}
+
 @end
